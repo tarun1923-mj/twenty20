@@ -3,11 +3,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const path = require("path");
-const User = require("./User");
+const User = require("./server/User");
 
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("mongo connected"))
@@ -50,9 +50,18 @@ app.post("/login", async (req, res) => {
 });
 
 // ROUTES
-app.get("/", (_, res) => res.sendFile(path.join(__dirname, "../public/login.html")));
-app.get("/register", (_, res) => res.sendFile(path.join(__dirname, "../public/register.html")));
-app.get("/portfolio", (_, res) => res.sendFile(path.join(__dirname, "../public/portfolio.html")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "login.html"));
+});
+
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "register.html"));
+});
+
+app.get("/portfolio", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "portfolio.html"));
+});
+
 
 app.listen(3000, () => {
   console.log("server running on http://localhost:3000");
