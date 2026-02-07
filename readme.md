@@ -5,17 +5,6 @@ The application provides user authentication (login and registration) and displa
 
 The focus of this project is on functionality, clarity, and correctness rather than advanced UI or complex features.
 
----
-
-## Live Application
-- Deployed URL (Vercel): https://<your-vercel-link>
-
----
-
-## GitHub Repository
-- Repository Link: https://github.com/<your-username>/<repo-name>
-
----
 
 ## Features
 
@@ -74,9 +63,9 @@ Deployment:
 ## Project Structure
 
 twenty20-app
-|
+|--index.js
 |-- server
-|   |-- index.js
+|   
 |   |-- User.js
 |
 |-- public
@@ -137,8 +126,8 @@ http://localhost:3000
 
 ## Author
 
-Manoj KR  
-Backend Developer · AI/ML Enthusiast
+Tarun MJ
+Software Developer · ML Enthusiast · Problem Solver
 
 ## Notes
 - MongoDB Atlas is used as the cloud database
