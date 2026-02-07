@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manoj KR | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="portfolio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Manoj KR</h1>
+    <p class="subtitle">
+      Backend Developer · AI/ML Enthusiast · System Design Learner
+    </p>
+    <p class="hero-desc">
+      I build backend systems, explore machine learning ideas,
+      and enjoy understanding how things work under the hood.
+    </p>
+    <p id="email" class="email"></p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h3>About Me</h3>
+    <p>
+      I’m a backend-focused developer who enjoys building reliable and scalable systems.
+      My work usually sits at the intersection of backend engineering, data, and machine learning.
+      I prefer learning concepts deeply and applying them by building real-world projects.
+    </p>
+    <p>
+      I’m especially interested in system design, clean architecture,
+      and writing code that is simple but effective.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <h3>Skills</h3>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Golang</span>
+      <span class="tag">Django</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Docker</span>
+      <span class="tag">System Design</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">NLP</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <h3>Projects</h3>
+
+    <div class="project-card">
+      <h4>Online Transaction Fraud Detection</h4>
+      <p class="project-desc">
+        Built a machine learning system to detect fraudulent transactions using supervised
+        learning techniques. Focused on data preprocessing, feature engineering,
+        and model evaluation.
+      </p>
+      <p class="project-tech">Python · Scikit-learn · Pandas</p>
+    </div>
+
+    <div class="project-card">
+      <h4>SDG Classifier using NLP</h4>
+      <p class="project-desc">
+        Developed an NLP-based classifier to map companies to relevant
+        Sustainable Development Goals based on textual descriptions.
+        Experimented with transformer-based models.
+      </p>
+      <p class="project-tech">NLP · Transformers · BERT</p>
+    </div>
+
+    <div class="project-card">
+      <h4>Movie Recommendation System</h4>
+      <p class="project-desc">
+        Built a tag-based movie recommendation system by scraping IMDb data
+        and mapping movie descriptions using NLP techniques.
+      </p>
+      <p class="project-tech">Python · NLP · Web Scraping</p>
+    </div>
+
+    <div class="project-card">
+      <h4>Book Sharing Platform</h4>
+      <p class="project-desc">
+        Designed and implemented a Django-based platform for sharing and managing books,
+        including authentication, CRUD operations, and basic access control.
+      </p>
+      <p class="project-tech">Django · PostgreSQL · Auth</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <button class="logout" onclick="logout()">Logout</button>
+  </section>
+
+</div>
+
+<script>
+  const email = localStorage.getItem("email");
+  if (!email) window.location.href = "/";
+  document.getElementById("email").innerText = email;
+
+  function logout() {
+    localStorage.clear();
+    window.location.href = "/";
+  }
+</script>
+
+</body>
+</html>
